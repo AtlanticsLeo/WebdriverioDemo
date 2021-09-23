@@ -2,7 +2,7 @@ const LoginPage = require('../pageobjects/login.page');
 const MiscObject = require('../pageobjects/misc.obj.js');
 const VueInputParent = require('../vueobjects/input.parent.js')
 
-describe('My Login application', () => {
+describe('Web Login', () => {
     it('invalid email', async () => {
         await LoginPage.open();
 

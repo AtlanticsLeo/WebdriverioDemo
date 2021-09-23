@@ -3,13 +3,14 @@ const RegisterPage = require('../pageobjects/register.page.js');
 const VueInputParent = require('../vueobjects/input.parent.js');
 
 
-describe("Register", () =>{
+describe("Register unit test", () =>{
     it('sucessful register account', async() =>{
         await MockServer.defaultRespond();
         await RegisterPage.open();
         await RegisterPage.register("Username", "email@email.com", false);
         await RegisterPage.register2(010101, "password", "password");
-        await expect(browser).toHaveUrlContaining("error/403");
+        // await expect(browser).toHaveUrlContaining("error/403");
+        await expect(browser).not.toHaveUrlContaining("register");
     })
 
     it('invalid email', async()=>{

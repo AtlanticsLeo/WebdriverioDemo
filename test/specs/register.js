@@ -3,7 +3,7 @@ const RegisterPage = require('../pageobjects/register.page.js');
 const VueInputParent = require('../vueobjects/input.parent.js');
 
 
-describe("Register with real", () =>{
+describe("Register with real step", () =>{
 
     it("use real otp", async() =>{
         const emailName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
