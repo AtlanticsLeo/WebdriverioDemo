@@ -26,6 +26,8 @@ describe("Register", () =>{
         await RegisterPage.register2(010101, "pwd", "pwd");
         const pwdParent = await VueInputParent.getParent(RegisterPage.inputPassword);
         await expect(pwdParent).toHaveClass("error--text");
+        // await expect(pwdParent).toHaveAttrContaning("class", "error")
+        // await expect(pwdParent).toHaveAttr("class", "error--text")
     })
 
     // it("use real otp", async() =>{
